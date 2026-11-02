@@ -1,0 +1,300 @@
+
+.app {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 50% 0%, #18223a 0%, transparent 40%),
+    #080a0f;
+}
+
+.header {
+  height: 82px;
+  padding: 0 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #202430;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-icon {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: #a5b4fc;
+  color: #101323;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.logo h1 {
+  font: 600 17px "Space Grotesk", sans-serif;
+  margin: 0;
+}
+
+.logo p {
+  margin: 4px 0 0;
+  color: #7e8799;
+  font-size: 12px;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #a6afc1;
+  font-size: 13px;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #6b7280;
+}
+
+.status-dot.active {
+  background: #f87171;
+  box-shadow: 0 0 12px #f87171;
+}
+
+.main {
+  max-width: 1150px;
+  margin: auto;
+  padding: 50px 28px 30px;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.hero-badge {
+  display: inline-block;
+  padding: 7px 13px;
+  border: 1px solid #3a4562;
+  border-radius: 30px;
+  color: #a5b4fc;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.hero h2 {
+  font: 600 clamp(38px, 5vw, 58px) "Space Grotesk", sans-serif;
+  letter-spacing: -2px;
+  line-height: 1.1;
+  margin: 22px 0 15px;
+}
+
+.hero h2 span {
+  color: #a5b4fc;
+}
+
+.hero p {
+  color: #929bad;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.controls button {
+  padding: 14px 24px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 13px;
+  border: none;
+}
+
+.start-button {
+  background: #a5b4fc;
+  color: #101323;
+}
+
+.stop-button {
+  background: #222735;
+  color: #f4f5f7;
+  border: 1px solid #373e4e !important;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.panel {
+  background: rgba(17, 21, 31, 0.9);
+  border: 1px solid #252b39;
+  border-radius: 16px;
+  padding: 24px;
+  min-height: 310px;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.panel-header > div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.panel-number {
+  color: #818cf8;
+  font-size: 12px;
+}
+
+.panel h3 {
+  margin: 0;
+  font: 600 17px "Space Grotesk", sans-serif;
+}
+
+.panel-tag {
+  color: #737d92;
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+
+.transcription-area {
+  width: 100%;
+  height: 155px;
+  resize: none;
+  background: #0c0f17;
+  border: 1px solid #282e3c;
+  border-radius: 10px;
+  padding: 15px;
+  color: #e5e7eb;
+  font-size: 13px;
+  line-height: 1.7;
+  outline: none;
+}
+
+.transcription-area:focus {
+  border-color: #818cf8;
+}
+
+.transcription-area::placeholder {
+  color: #586174;
+}
+
+.suggest-button {
+  width: 100%;
+  margin-top: 15px;
+  padding: 13px;
+  border: none;
+  border-radius: 9px;
+  background: #a5b4fc;
+  color: #101323;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.suggest-button span {
+  float: right;
+  font-size: 17px;
+}
+
+.answer-area {
+  height: 205px;
+  overflow-y: auto;
+  background: #0c0f17;
+  border: 1px solid #282e3c;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.empty-answer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.answer-icon {
+  font-size: 30px;
+  color: #a5b4fc;
+}
+
+.empty-answer p {
+  color: #8992a5;
+  font-size: 12px;
+}
+
+.empty-answer span {
+  color: #596174;
+  font-size: 10px;
+}
+
+.answer-text {
+  color: #d9deeb;
+  font-size: 13px;
+  line-height: 1.8;
+  white-space: pre-wrap;
+}
+
+.cursor {
+  display: inline-block;
+  width: 6px;
+  height: 15px;
+  background: #a5b4fc;
+  margin-left: 3px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 35px;
+  color: #5c6578;
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 750px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .main {
+    padding: 35px 18px;
+  }
+
+  .header {
+    padding: 0 18px;
+  }
+
+  .hero h2 {
+    font-size: 40px;
+  }
+
+  footer {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+}
+
